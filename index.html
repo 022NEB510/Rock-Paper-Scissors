@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vinit RPS Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAgCAMAAADUt/MJAAACUlBMVEVHcEwBA2EDB3MHCWr1+/sDBUsDBGEJCgn///8FBkUAAFsEBnAEA1YFCWb+qAAHB1dSU48CAlTqpwMFBCgCAmYAAGEJDGwDBmECjQUAAE0ABV0AAWMAABMBAV4CAks1Q5UFDXgNDlwLEm8DEUoAAEE0N2dYnOgRFnwtMIUAAHQAAF03P54DA1AFCGcABG3HkiAGCmgAAB8GDGwOF3XOiRs0Ml0BiwQEiwb/kQBEfc1zv/8KaDEfHyEDCXb2ogAAB0uHXEXgnBUHEnsBA3T3sQC2fSkRGFzLdkIAAD8PO0Nwzf/xpgAOD3AXKYAHhQwLhxYAiwIqa7GBsdwBjARVkddpsvrvnQp3VTscJ2caIIHEfjiAVEkqIEy4fzf////lnwgBBnYDGEcgLJQcMnASIVoAAFUOFHcgT5gmMoBBbsEGjwM5Za4UeB8OixJDf8xerPttoZwnKE06JlGYaTtVNk5JKGYfH2MAAABcX5yyjlcdQpvjiBENZi9Wq+FgsuIWhxl1XHhdo+TalAvShhYSiwguZYovLkgTiBVyeVqrw4cvUbUAe6sAiAAAMH4KmQBcRUWVaDLCnQ5xWkX0qAD2qQAAAGQAAFzuowD5qAD9rQD/sgDypAAAAFZSWVsAjgH8owCXf0tnuf0gH1U5Q1MALG0IhxCMf1e2jCfp+3ZEWXUaIIEDS3gKR2GbV1m/hyqcljKt4rZ+iWLM3WImG2TnpAApK5J+aURFUaTIXjpyYVGRua8lJ05hpeZhfJTD/6uBXVXA/4WwwWfS/3uchTKImXiZmWE4y6XHAAAAk3RSTlMApN+wByvTAgsW95c5m/5nDr3tCIvp08j15lGSLd3Q4rl2hEab/fHG+aK4/a36/v7trbukrGL7ufVj/h8QwPcf1vXQxP6Mpf6uevz3rtXjcMNfM6hH+/Ru8fH4uq34ENXzkc80i+KVaq1/2OeG07Lv+8S10NfYvIfW/r/+Zbzgw+XawexCk/F87f7Ti4qeLIaN0HdJFij9AAAC80lEQVQokT2TBVcbQRDH9yKXXJwQIx5iEEhwd3tYkIcVqSItDnV3dzmJXBSHForV3b5Xj3Cwb3f27f52Zv8rAwAHUJVDWTYEw0rhADXcLQDskFjL0cHMTCZTlxNbG5vdo9xUhVAgFgiVqdz9uVjP4rJNzHS12zZsZjJNbBZrjxSXmevrso7zLYZoNDpm4WclJprMZZIdJEiA3ccz3cYmW+GUrbPQ1uRgUpQhFwAQn0owFApj/6PCQltBx2Rn59TXsUpYkY47JECihmSmEyMjHZMFSBvoeFpQcLOhIXpJBqmpqByJQFPW1sYyC7igiMUeANprDVctA5JdOQgvDgF3WvJG7ze35jVfHy86EcdDaKGHEwKweTQUCqnyckPz881X9IT8MM24+kBAXt+aG8ptV+XOT7QMBQiYu8fivn0m5IPtqlBruyqvPmGGCJzbZxnr35dxJ/REpXrWcuze27eRGeridrWwMtZ/LhO4Uzk+UQTx/sxagwsZ8bQfq+7hb+uWddnqKILwrcW5H8GLB/cunFv3ZWlpaTOozHn5XOlaDM59ilB+HFpLYHbzFw96Jd2WvoCsa2mLMyf3tegJfONBYo3Ug6KN2bJ0pwsfKqYZkkAQQ+Lsxu1/03896C2THMflEpqxeQScc4T0pEWmNxZI9IgYxnls+tXFPMcBqYf03M5/nL+AoaT0gIMnjv0TBBFC1FYkSl7Ov5u/JvKinq4ajRBBuGAwTqjJLiVRDAvX1t6o7Q2LMNRTmi0TZmqA2Ok66w9jGOZdm1v9uPr6kMiLkR7yDO4UA8dKEr/c59uB798EXwd9VFAUPS1McmUCts5g5x+s8GMY6kt7E/GLwl5fxSm+PUlHSdXq+1OqZOXS6upq/6zf5xM1lstKKu06wc4RtPqUlB6mpu9QhVcU7urt47t73q0o6QMWn+/+YEhiJCczqiijqDSkpB9DAJ0rHK1FYbgwfJRRVcIwZjV1W7Ss/XygfjCi5tuPGgVGRglfjcTv5sp/enXM3i1w8wwAAAAASUVORK5CYII="
+    />
+  </head>
+  <body>
+    <div class="whole">
+      <p class="notice">Click On The Choice You Wanna Make :</p>
+      <div class="container">
+        <div class="result-disp" id="res-display" style="display: none">
+          <p class="result" id="result"></p>
+        </div>
+        <div class="choice">
+          <div class="emoji rock">
+            <button class="emoji-btn" onclick="playGame('rock')">
+              &#129704;
+            </button>
+            <p>Rock</p>
+          </div>
+          <div class="emoji paper">
+            <button class="emoji-btn" onclick="playGame('paper')">
+              &#129531;
+            </button>
+            <p>Paper</p>
+          </div>
+          <div class="emoji scissor">
+            <button class="emoji-btn" onclick="playGame('scissors')">
+              &#9986;
+            </button>
+            <p>Scissor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-image">
+        <img
+          class="dp"
+          src="https://rabinkalikote.com/sx3c/img/logo.jpg"
+          alt=""
+        />
+      </div>
+      <div class="footer-author">
+        <p class="author-info author-id">Vinit Baral | 022NEB510</p>
+        <p class="author-info author-club">Computer Club Member</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
